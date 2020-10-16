@@ -1,9 +1,16 @@
 import dva from 'dva';
 import './index.css';
 
-// 1. Initialize
-const app = dva();
-
+// 1. Initialize 需要一些初始数据让这个应用 run 起来
+// const app = dva();
+const app = dva({
+  initialState: {
+    products: [
+      {name: 'dva', id: 1},
+      {name: 'antd', id: 2},
+    ],
+  },
+});
 // 2. Plugins
 // app.use({});
 
